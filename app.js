@@ -36,7 +36,7 @@ app.use(
 );
 app.use(passport.initialize());
 app.use(passport.session());
-const uri= "mongodb+srv://Kaushal_Chakardhari:Kaushal_1113@cluster0.j3ptd.mongodb.net/blogPostDB";
+const uri=process.env.ATLAS_URI;
 //const uri =   "mongodb://localhost:27017/userDB";                                                        //process.env.ATLAS_URI;
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.set("useCreateIndex", true);
